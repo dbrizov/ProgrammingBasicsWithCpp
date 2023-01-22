@@ -42,7 +42,7 @@ void SummerOutfit()
 	const string TIME_OF_DAY_AFTERNOON = "Afternoon";
 	const string TIME_OF_DAY_EVENING = "Evening";
 
-	const string OUTFIT_SHIRT = OUTFIT_SHIRT;
+	const string OUTFIT_SHIRT = "Shirt";
 	const string OUTFIT_SWEARSHIRT = "Sweatshirt";
 	const string OUTFIT_TSHIRT = "T-Shirt";
 	const string OUTFIT_SWIM_SUIT = "Swim Suit";
@@ -376,8 +376,15 @@ void OperationsBetweenNumbers()
 	}
 	case '%':
 	{
-		int result = n1 % n2;
-		cout << n1 << " " << operation << " " << n2 << " = " << result;
+		if (n2 == 0)
+		{
+			cout << "Cannot divide " << n1 << " by zero";
+		}
+		else
+		{
+			int result = n1 % n2;
+			cout << n1 << " " << operation << " " << n2 << " = " << result;
+		}
 
 		break;
 	}
